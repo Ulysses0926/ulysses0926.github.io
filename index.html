@@ -2,11 +2,143 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <title>個人靜態首頁</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>天都齋的魯魯航</title>
+  <style>
+    :root {
+      --bg:       #FDF6EC;
+      --card-bg:  #FFFAF4;
+      --border:   #E2C9A0;
+      --heading:  #4A2C0A;
+      --text:     #6B4C2A;
+      --muted:    #9C7B5A;
+      --accent:   #C0622F;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, "Noto Sans TC", sans-serif;
+      padding: 3rem 1.5rem;
+      min-height: 100vh;
+    }
+
+    header {
+      max-width: 860px;
+      margin: 0 auto 2.5rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: var(--heading);
+      letter-spacing: 0.05em;
+    }
+
+    header p {
+      margin-top: 0.4rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .section-label {
+      max-width: 860px;
+      margin: 0 auto 1rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+
+    .grid {
+      max-width: 860px;
+      margin: 0 auto 3rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.4rem 1.5rem;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 18px rgba(160, 90, 30, 0.14);
+      transform: translateY(-2px);
+    }
+
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--heading);
+      margin-bottom: 0.45rem;
+    }
+
+    .card-desc {
+      font-size: 0.86rem;
+      color: var(--muted);
+      line-height: 1.65;
+      flex: 1;
+    }
+
+    .card-link {
+      margin-top: 1.1rem;
+      font-size: 0.8rem;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    footer {
+      max-width: 860px;
+      margin: 0 auto;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+  </style>
 </head>
 <body>
-  <h1>天都齋的魯魯航</h1>
-  <p>蒐集材料</p>
-  <p>架構中</p>
+
+  <header>
+    <h1>天都齋的魯魯航</h1>
+    <p>小工具與作品集</p>
+  </header>
+
+  <div class="section-label">作品</div>
+  <div class="grid">
+
+    <a class="card" href="https://weddingquest.pages.dev" target="_blank" rel="noopener">
+      <div class="card-title">婚禮大冒險</div>
+      <div class="card-desc">賓客互動婚禮遊戲，結合闖關任務與即時積分排行</div>
+      <div class="card-link">前往 →</div>
+    </a>
+
+    <a class="card" href="https://small-shadow-d28b.2vkhym52rn.workers.dev" target="_blank" rel="noopener">
+      <div class="card-title">台灣當季蔬果</div>
+      <div class="card-desc">依台灣節氣與進口產季整理，約 80 種品項查詢</div>
+      <div class="card-link">前往 →</div>
+    </a>
+
+    <a class="card" href="https://tainan-event.pages.dev" target="_blank" rel="noopener">
+      <div class="card-title">台南文化活動</div>
+      <div class="card-desc">整合台南文化局、文化中心、美術館等場館活動資訊</div>
+      <div class="card-link">前往 →</div>
+    </a>
+
+  </div>
+
+  <footer>© 天都齋的魯魯航</footer>
+
 </body>
 </html>
